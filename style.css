@@ -1,0 +1,165 @@
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+
+/* aタグ */
+a {
+  text-decoration: none;  /* text-decoration: noneを設定 */
+  color: #38b48b;  /* 文字色は#38b48b */
+}
+
+/* フォントの変更 */
+header, nav, h2, .main-heading, .main-info, footer {
+  font-family: "Arial", Helvetica, sans-serif;
+}
+
+/* ヘッダ領域 */
+header {
+  width: 100%; /* 横幅100% */
+  height: 100px;  /* 高さ100px */
+  /* margin: 0 auto; */
+  text-align: center;
+  background-color: darkgreen;
+}
+
+/* ヘッダの見出し「Sakura Yoko Official」 */
+header .heading {
+  padding-top: 10px;
+}
+
+/* ヘッダのテキスト */
+header .heading a {
+  color: #fff;
+}
+
+/* ナビ領域 */
+.nav-list {
+  padding: 10px 0;
+}
+
+/* ナビ項目 */
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  color: #fff;
+}
+
+/* メイン領域 */
+main {
+  padding: 10px 40px 40px 40px; /* 上に10px、左右下に40pxの内側余白 */
+  background-color: #ecfcdf;
+}
+
+/* メインの見出し項目 My Name is Sakura Yoko */
+.main-heading {
+  text-align:  center;  /* 中央寄せ */
+  margin-bottom: 10px;  /* 下部余白を10px */
+}
+
+/* 画像・自己紹介文領域 */
+.main-box {
+  display: flex;  /* flexboxを使用 */
+  justify-content: center;  /* 左右中央寄せ */
+}
+
+/* 画像領域 */
+.main-visual {
+  width: 30%;  /* 横幅30% */
+  margin-right: 10px;  /* 右側外部余白を10px */
+}
+
+/* 画像 */
+.main-image {
+  width: 100%;  /* 横幅を100% */
+  border-radius: 10px;  /* 角丸：10px */
+}
+
+/* 自己紹介文領域 */
+.main-info {
+  width: 70%; /* 横幅：70% */
+  background-color: #fff; /* 背景色：#fff */
+  border-radius: 10px;  /* 角丸：10px */
+  padding: 0 10px;   /* 左右に内部余白10px */
+  line-height: 40px;  /* １行の高さは40px */
+ }
+
+ /* 自己紹介の項目 */
+.row {
+  display: flex;
+  flex-wrap: nowrap   /* 横並び */
+}
+
+/* 自己紹介文>見出し項目 */
+.main-label {
+  width: 100px;  /* 横幅100px */
+  font-weight: bold;  /* 文字の太さはbold */
+}
+
+/* 自己紹介文>経歴>flexレイアウト解除 */
+.Biography {
+  display: block;
+}
+
+/* 自己紹介文>資格>flexレイアウト解除 */
+.Qualifications {
+  display: block;
+}
+
+.Qualifications {
+  display: block;
+}
+
+.label-p {
+  width: 100px;
+  font-weight: bold;
+}
+
+/* 自己紹介文>Message>icon */
+.social  {
+  margin-right: 20px;  /* 右と下に20pxの外部余白 */
+  margin-bottom: 20px;
+}
+
+/* フッター領域 */
+footer {
+  margin-bottom: auto;  /* 画面の一番下に来るように設定 */
+  bottom: 0px;
+  width: 100%;  /* 横幅100% */
+  height: 100px;  /* 高さ100px */
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* 中央寄せ */
+  background-color: darkgreen;  /* 背景色darkgreen */
+}
+
+/* フッターのテキスト */
+.footer-text {
+  color: #fff;  /* 文字色を#fff */
+}
+
+/* タブレット縦置きサイズ（768px）以下の際に適用される設定 */
+@media screen and (max-width:768px) {
+  .main-box {
+    display: block;    /* 画像領域と自己紹介文領域の横並びを解除 */
+  }
+  
+  .main-visual{
+    width: 100%;  /* 画像領域の横幅は100% */
+  }
+  
+  .main-info {
+    width: 100%;  /* 自己紹介文領域の横幅は100% */
+  }
+  
+  footer {
+    margin-bottom: auto;  /* 画面の最下部に設定 */
+  }
+  
+}
+
+
